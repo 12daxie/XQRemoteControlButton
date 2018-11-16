@@ -1,0 +1,2 @@
+# XQRemoteControlButton
+一个根据遥控图片来控制所点击的区域
