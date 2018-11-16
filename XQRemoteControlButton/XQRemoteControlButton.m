@@ -225,8 +225,8 @@
         }
         
         [UIView animateWithDuration:0.2 animations:^{
-            for (NSInteger i=0; i<layerArray.count; i++) {
-                CAShapeLayer * layer=[layerArray objectAtIndex:i];
+            for (NSInteger i=0; i<self->layerArray.count; i++) {
+                CAShapeLayer * layer=[self->layerArray objectAtIndex:i];
                 if (i==tag) {
                     layer.fillColor=[[UIColor colorWithWhite:0 alpha:0.1] CGColor];
                 }else{
@@ -241,7 +241,7 @@
     if (longGesture.state==UIGestureRecognizerStateEnded||longGesture.state==UIGestureRecognizerStateCancelled||longGesture==nil) {
        
         [UIView animateWithDuration:0.3 animations:^{
-            for (CAShapeLayer *layer in layerArray) {
+            for (CAShapeLayer *layer in self->layerArray) {
                 layer.fillColor=[[UIColor colorWithWhite:0 alpha:0] CGColor];;
             }
         }];
